@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|VisualGDB">
+      <Configuration>Debug</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|VisualGDB">
+      <Configuration>Release</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{C997BB1A-D4B3-4F89-A420-FCCE510A5ACB}</ProjectGuid>
+    <BSP_ID>com.sysprogs.arm.stm32</BSP_ID>
+    <BSP_VERSION>2021.02</BSP_VERSION>
+    <InPlaceBSPSubdir />
+    <RelativeBSPPath />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <GNUConfigurationType>Debug</GNUConfigurationType>
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>10.3.1/10.2.90/r1</ToolchainVersion>
+    <MCUPropertyListFile>$(ProjectDir)stm32.props</MCUPropertyListFile>
+    <AutoIncludePaths>true</AutoIncludePaths>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+    <ToolchainVersion>10.3.1/10.2.90/r1</ToolchainVersion>
+    <MCUPropertyListFile>$(ProjectDir)stm32.props</MCUPropertyListFile>
+    <AutoIncludePaths>true</AutoIncludePaths>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <Link>
+      <LinkerScript>STM32H745ZITx_FLASH_CM7.ld</LinkerScript>
+      <LibrarySearchDirectories>$(ProjectDir)\Common\Drivers\CMSIS_DSP\Lib\GCC\;;%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>arm_cortexM7lfdp_math;;%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <AdditionalLinkerInputs>;%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <AdditionalIncludeDirectoriesForLinkerScript>%(AdditionalIncludeDirectoriesForLinkerScript)</AdditionalIncludeDirectoriesForLinkerScript>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Common\Drivers\STM32H7xx_HAL_Driver\Inc;$(ProjectDir)\Common\Drivers\CMSIS_DSP\DSP\Include;CM7/Inc;Common/Inc;$(BSP_ROOT)/STM32H7xxxx/CMSIS_HAL/Device/ST/STM32H7xx/Include;$(BSP_ROOT)/STM32H7xxxx/STM32H7xx_HAL_Driver/Inc;$(BSP_ROOT)/VendorSamples/H7/Drivers/BSP/STM32H7xx_Nucleo;$(BSP_ROOT)/VendorSamples/H7/Drivers/BSP/Components/Common;$(BSP_ROOT)/VendorSamples/H7/Utilities/Fonts;$(BSP_ROOT)/VendorSamples/H7/Utilities/CPU;$(BSP_ROOT)/STM32H7xxxx/CMSIS_HAL/Include;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG=1;USE_HAL_DRIVER;USE_STM32H7XX_NUCLEO_144_MB1363;CORE_CM7;STM32H745xx;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization>Og</Optimization>
+    </ClCompile>
+    <ToolchainSettingsContainer>
+      <FloatABI>hard</FloatABI>
+      <ARMFPU>fpv5-sp-d16</ARMFPU>
+      <ARMCPU>cortex-m7</ARMCPU>
+    </ToolchainSettingsContainer>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <Link>
+      <LinkerScript>STM32H745ZITx_FLASH_CM7.ld</LinkerScript>
+      <LibrarySearchDirectories>C:\Users\Michi\Source\Repos\diplomarbeit\H745ZI_DSP\H745ZI_DSP\Common\Drivers\CMSIS_DSP\Lib\GCC;C:\Users\Michi\Source\Repos\diplomarbeit\H745ZI_DSP\H745ZI_DSP\Common\Drivers\CMSIS_DSP\Lib\GCC;%(LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>arm_cortexM7lfdp_math;arm_mathM7lfdp</AdditionalLibraryNames>
+      <AdditionalIncludeDirectoriesForLinkerScript>%(AdditionalIncludeDirectoriesForLinkerScript)</AdditionalIncludeDirectoriesForLinkerScript>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Michi\Source\Repos\diplomarbeit\H745ZI_DSP\H745ZI_DSP\Common\Drivers\STM32H7xx_HAL_Driver\Inc;C:\Users\Michi\Source\Repos\diplomarbeit\H745ZI_DSP\H745ZI_DSP\Common\Drivers\CMSIS_DSP\DSP\Include;C:\Users\Michi\Source\Repos\diplomarbeit\H745ZI_DSP\H745ZI_DSP\Common\Drivers\CMSIS_DSP\DSP\Include;CM7/Inc;Common/Inc;$(BSP_ROOT)/STM32H7xxxx/CMSIS_HAL/Device/ST/STM32H7xx/Include;$(BSP_ROOT)/STM32H7xxxx/STM32H7xx_HAL_Driver/Inc;$(BSP_ROOT)/VendorSamples/H7/Drivers/BSP/STM32H7xx_Nucleo;$(BSP_ROOT)/VendorSamples/H7/Drivers/BSP/Components/Common;$(BSP_ROOT)/VendorSamples/H7/Utilities/Fonts;$(BSP_ROOT)/VendorSamples/H7/Utilities/CPU;$(BSP_ROOT)/STM32H7xxxx/CMSIS_HAL/Include;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(ClCompile.PreprocessorDefinitions);NDEBUG=1;RELEASE=1;USE_HAL_DRIVER;USE_STM32H7XX_NUCLEO_144_MB1363;CORE_CM7;STM32H745xx</PreprocessorDefinitions>
+    </ClCompile>
+    <ToolchainSettingsContainer>
+      <FloatABI>hard</FloatABI>
+    </ToolchainSettingsContainer>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c.c" />
+    <ClCompile Include="Common\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c_ex.c" />
+    <ClCompile Include="Common\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2s.c" />
+    <ClCompile Include="Common\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_mdma.c" />
+    <ClCompile Include="Common\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_sai.c" />
+    <ClCompile Include="fx_lib.c" />
+    <ClCompile Include="i2c.c" />
+    <ClCompile Include="i2c_lcd.c" />
+    <ClCompile Include="rcc.c" />
+    <ClCompile Include="ring_buffer.c" />
+    <ClCompile Include="timer.c" />
+    <ClCompile Include="user_interface.c" />
+    <ClInclude Include="defines_and_constants.h" />
+    <ClInclude Include="fx_lib.h" />
+    <ClInclude Include="i2c.h" />
+    <ClInclude Include="i2c_lcd.h" />
+    <ClInclude Include="rcc.h" />
+    <ClInclude Include="ring_buffer.h" />
+    <ClCompile Include="CM7\Src\i2s.c" />
+    <ClCompile Include="Common\Src\system_stm32h7xx.c" />
+    <ClCompile Include="CM7\Src\main.c" />
+    <ClCompile Include="CM7\Src\stm32h7xx_hal_msp.c" />
+    <ClCompile Include="CM7\Src\stm32h7xx_it.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_adc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_adc_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_cortex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_cryp.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_cryp_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma2d.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_flash.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_flash_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_gpio.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_exti.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_hsem.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_lptim.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_spi.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_spi_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim.c" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim_ex.c" />
+    <ClCompile Include="$(BSP_ROOT)\VendorSamples\H7\Drivers\BSP\STM32H7xx_Nucleo\stm32h7xx_nucleo.c" />
+    <ClInclude Include="timer.h" />
+    <ClInclude Include="user_interface.h" />
+    <None Include="stm32.props" />
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\StartupFiles\startup_stm32h745xx.c" />
+    <ClInclude Include="CM7\Inc\i2s.h" />
+    <ClInclude Include="Common\Drivers\CMSIS_DSP\DSP\Include\arm_common_tables.h" />
+    <ClInclude Include="Common\Drivers\CMSIS_DSP\DSP\Include\arm_const_structs.h" />
+    <ClInclude Include="Common\Drivers\CMSIS_DSP\DSP\Include\arm_math.h" />
+    <ClInclude Include="Common\Drivers\STM32H7xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h" />
+    <ClInclude Include="Common\Inc\stm32h7xx_nucleo_conf.h" />
+    <ClInclude Include="CM7\Inc\main.h" />
+    <ClInclude Include="CM7\Inc\stm32h7xx_hal_conf.h" />
+    <ClInclude Include="CM7\Inc\stm32h7xx_it.h" />
+    <None Include="H745ZI_DSP-Debug.vgdbsettings" />
+    <None Include="H745ZI_DSP-Release.vgdbsettings" />
+    <None Include="stm32.xml" />
+  </ItemGroup>
+</Project>

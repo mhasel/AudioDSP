@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source files">
+      <UniqueIdentifier>{8c026f82-5d12-41fe-9549-0ce475541346}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{9a605268-edfb-4db3-b570-3aa4328e441f}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource files">
+      <UniqueIdentifier>{989b2b0d-d8c0-4ebc-993a-ab4a8d1e56ce}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Source files\Shared sources">
+      <UniqueIdentifier>{ae323d36-909c-4664-a202-b04d7e9e6953}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\Device-specific files">
+      <UniqueIdentifier>{789b46fa-1d58-430a-9ddd-751386cc149e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\Device-specific files">
+      <UniqueIdentifier>{c609767c-4a14-43e3-a51f-87b1f919d11a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VisualGDB settings">
+      <UniqueIdentifier>{27106eb7-ab91-438c-99f5-1a7c12ca5330}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\Legacy">
+      <UniqueIdentifier>{84308dfa-a060-46ad-b0f2-73dbd74a9b97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\Legacy">
+      <UniqueIdentifier>{a62aafb0-c500-42f3-bc4e-b61cfa36ab77}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\Src\system_stm32h7xx.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="CM7\Src\main.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="CM7\Src\stm32h7xx_hal_msp.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="CM7\Src\stm32h7xx_it.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_adc.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_adc_ex.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_cortex.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_cryp.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_cryp_ex.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma2d.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma_ex.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_flash.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_flash_ex.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_gpio.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_exti.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_hsem.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_lptim.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr_ex.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc_ex.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_spi.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_spi_ex.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim_ex.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="$(BSP_ROOT)\VendorSamples\H7\Drivers\BSP\STM32H7xx_Nucleo\stm32h7xx_nucleo.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <None Include="stm32.props">
+      <Filter>Source files\Device-specific files</Filter>
+    </None>
+    <ClCompile Include="$(BSP_ROOT)\STM32H7xxxx\StartupFiles\startup_stm32h745xx.c">
+      <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClInclude Include="Common\Inc\stm32h7xx_nucleo_conf.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="CM7\Inc\main.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="CM7\Inc\stm32h7xx_hal_conf.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="CM7\Inc\stm32h7xx_it.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <None Include="H745ZI_DSP-Debug.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="H745ZI_DSP-Release.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="stm32.xml">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <ClCompile Include="fx_lib.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="ring_buffer.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="timer.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="i2c_lcd.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="i2c.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c_ex.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CM7\Src\i2s.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="rcc.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2s.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_mdma.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_sai.c">
+      <Filter>Source files\Shared sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CM7\Inc\i2s.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Drivers\CMSIS_DSP\DSP\Include\arm_common_tables.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Drivers\CMSIS_DSP\DSP\Include\arm_const_structs.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Drivers\CMSIS_DSP\DSP\Include\arm_math.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Drivers\STM32H7xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h">
+      <Filter>Header files\Legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="rcc.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="defines_and_constants.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="fx_lib.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="ring_buffer.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="i2c_lcd.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="i2c.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
